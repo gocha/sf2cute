@@ -12,6 +12,7 @@
 #include <vector>
 #include <unordered_map>
 #include <ostream>
+#include <cstdint>
 
 #include <sf2cute/types.hpp>
 
