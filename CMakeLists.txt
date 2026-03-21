@@ -107,7 +107,7 @@ install(
 
 # install the public header files
 install(
-    DIRECTORY ${CMAKE_SOURCE_DIR}/include/
+    DIRECTORY ${PROJECT_SOURCE_DIR}/include/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 
@@ -122,7 +122,7 @@ install(
 include(CMakePackageConfigHelpers)
 
 write_basic_package_version_file(
-    ${CMAKE_BINARY_DIR}/cmake/sf2cute-config-version.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/cmake/sf2cute-config-version.cmake
     VERSION ${SF2CUTE_VERSION}
     COMPATIBILITY AnyNewerVersion
 )
@@ -135,8 +135,8 @@ configure_package_config_file(
 
 install(
     FILES
-        ${CMAKE_BINARY_DIR}/cmake/sf2cute-config.cmake
-        ${CMAKE_BINARY_DIR}/cmake/sf2cute-config-version.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/cmake/sf2cute-config.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/cmake/sf2cute-config-version.cmake
     DESTINATION share/sf2cute
 )
 
